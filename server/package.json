@@ -4,7 +4,7 @@
   "description": "Nasa Dashboard Machine",
   "main": "src/server.js",
   "scripts": {
-    "test": "jest --detectOpenHandles",
+    "test": "jest --config ./test/jest-e2e.json --forceExit",
     "watch-test": "jest --watch",
     "watch": "nodemon src/server.js",
     "start": "node src/server.js",
