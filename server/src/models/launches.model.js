@@ -2,7 +2,7 @@ const axios=require('axios');
 const launchesModel=require('./launches.mongo')
 const planets=require('./planets.mongo');
 
-
+let  LATEST_FLIGHT_NUMBER_DEFAULT=100;
 
 const SPACEX_URL='https://api.spacexdata.com/v4/launches/query';
 
