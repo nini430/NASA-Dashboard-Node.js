@@ -1,10 +1,12 @@
 const app=require('../../app')
 const request=require('supertest')
 const {mongoConnect,mongooseDisconnect}=require('../../services/mongo')
+const {loadAllPlanets}=require('../../models/planets.model')
 
 describe('Launches API',()=>{
     beforeAll(async()=>{
         await mongoConnect();
+        await loadAllPlanets();
     })
     describe('GET /launches',()=>{
         test('get launches returns 200',async()=>{
